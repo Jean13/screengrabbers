@@ -13,7 +13,7 @@ import win32ui
 import win32con
 import win32api
 
-def screenshot_taker():
+def win_screenshot_taker():
 	# Grab a handle to the main desktop window
 	fg_window = win32gui.GetDesktopWindow()
 
@@ -45,5 +45,5 @@ def screenshot_taker():
 	mem_dc.DeleteDC()
 	win32gui.DeleteObject(screenshot.GetHandle())
 
-screenshot_taker()
+win_screenshot_taker()
 
